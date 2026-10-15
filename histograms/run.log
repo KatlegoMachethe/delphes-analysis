@@ -1,0 +1,57 @@
+cd .. && /home/katlego/wits/phd/ttaxion/bin/analyzedelphes codes/params.json
+[32m  ✓ /home/katlego/wits/phd/ttaxion/data-for-delphes/histograms/m10 created[0m
+[32m  ✓ Histogram Array created[0m
+Input: /home/katlego/wits/phd/ttaxion/data-for-delphes/sig_10GeV.root (50000 entries; m10 selection)
+[32m  ✓ Done filling histograms[0m
+Events: 50000, fewer than two photons: 92, missing required jets after photon selection: 10593, passed all cuts: 1088
+      dphi_a1_j1 integral: [1;35m0.000468127[0m (underflow=0.000122433, overflow=0.000121778)
+      dphi_j1_j2 integral: [1;35m0.000532945[0m (underflow=8.96969e-05, overflow=8.96969e-05)
+      dphi_a1_j2 integral: [1;35m0.000508065[0m (underflow=9.95177e-05, overflow=0.000104755)
+      dphi_a1_bbar integral: [1;35m0.000584013[0m (underflow=5.56515e-05, overflow=7.26742e-05)
+      dphi_a2_bbar integral: [1;35m0.000578775[0m (underflow=5.63062e-05, overflow=7.72573e-05)
+      dphi_j1_bbar integral: [1;35m0.000463544[0m (underflow=0.000113922, overflow=0.000134873)
+      cost_bbar integral: [1;35m0.000712339[0m (underflow=0, overflow=0)
+[32m  ✓ Deleting Histograms[0m
+[1;36m***********************************************************************[0m
+[32m  ✓ /home/katlego/wits/phd/ttaxion/data-for-delphes/histograms/m50 created[0m
+[32m  ✓ Histogram Array created[0m
+Input: /home/katlego/wits/phd/ttaxion/data-for-delphes/sig_50GeV.root (50000 entries; m50 selection)
+[32m  ✓ Done filling histograms[0m
+Events: 50000, fewer than two photons: 13, missing required jets after photon selection: 11492, passed all cuts: 22
+      dphi_a1_j1 integral: [1;35m3.31856e-06[0m (underflow=3.31856e-06, overflow=2.48892e-06)
+      dphi_j1_j2 integral: [1;35m5.80748e-06[0m (underflow=8.2964e-07, overflow=2.48892e-06)
+      dphi_a1_j2 integral: [1;35m7.05194e-06[0m (underflow=1.24446e-06, overflow=8.2964e-07)
+      dphi_a1_bbar integral: [1;35m7.05194e-06[0m (underflow=8.2964e-07, overflow=1.24446e-06)
+      dphi_a2_bbar integral: [1;35m7.46676e-06[0m (underflow=4.1482e-07, overflow=1.24446e-06)
+      dphi_j1_bbar integral: [1;35m4.97784e-06[0m (underflow=8.2964e-07, overflow=3.31856e-06)
+      cost_bbar integral: [1;35m9.12604e-06[0m (underflow=0, overflow=0)
+[32m  ✓ Deleting Histograms[0m
+[1;36m***********************************************************************[0m
+[32m  ✓ /home/katlego/wits/phd/ttaxion/data-for-delphes/histograms/m100 created[0m
+[32m  ✓ Histogram Array created[0m
+Input: /home/katlego/wits/phd/ttaxion/data-for-delphes/sig_100GeV.root (50000 entries; m100 selection)
+[32m  ✓ Done filling histograms[0m
+Events: 50000, fewer than two photons: 8, missing required jets after photon selection: 12287, passed all cuts: 17082
+      dphi_a1_j1 integral: [1;35m0.00237097[0m (underflow=0.000693475, overflow=0.000706943)
+      dphi_j1_j2 integral: [1;35m0.00293043[0m (underflow=0.000428978, overflow=0.000411978)
+      dphi_a1_j2 integral: [1;35m0.00260367[0m (underflow=0.000599643, overflow=0.000568071)
+      dphi_a1_bbar integral: [1;35m0.0031936[0m (underflow=0.000300042, overflow=0.000277743)
+      dphi_a2_bbar integral: [1;35m0.00306444[0m (underflow=0.000356783, overflow=0.000350159)
+      dphi_j1_bbar integral: [1;35m0.00249659[0m (underflow=0.000651306, overflow=0.000623487)
+      cost_bbar integral: [1;35m0.00377139[0m (underflow=0, overflow=0)
+[32m  ✓ Deleting Histograms[0m
+[1;36m***********************************************************************[0m
+[32m  ✓ /home/katlego/wits/phd/ttaxion/data-for-delphes/histograms/background created[0m
+[32m  ✓ Histogram Array created[0m
+Input: /home/katlego/wits/phd/ttaxion/data-for-delphes/bg.root (50000 entries; background, common selection)
+[32m  ✓ Done filling histograms[0m
+Events: 50000, fewer than two photons: 4, missing required jets after photon selection: 12517, passed all cuts: 13332
+      dphi_a1_j1 integral: [1;35m0.0218347[0m (underflow=0.00419772, overflow=0.00420225)
+      dphi_j1_j2 integral: [1;35m0.0223337[0m (underflow=0.00389837, overflow=0.00400269)
+      dphi_a1_j2 integral: [1;35m0.0222384[0m (underflow=0.0040231, overflow=0.00397321)
+      dphi_a1_bbar integral: [1;35m0.0229914[0m (underflow=0.00359676, overflow=0.00364665)
+      dphi_a2_bbar integral: [1;35m0.0227033[0m (underflow=0.00380993, overflow=0.00372149)
+      dphi_j1_bbar integral: [1;35m0.0200045[0m (underflow=0.00505494, overflow=0.00517513)
+      cost_bbar integral: [1;35m0.030235[0m (underflow=0, overflow=0)
+[32m  ✓ Deleting Histograms[0m
+[1;36m***********************************************************************[0m

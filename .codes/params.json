@@ -1,0 +1,7 @@
+{
+    "base_dir": "/home/katlego/wits/phd/ttaxion/data-for-delphes/",
+    "signal_files": ["sig_10GeV.root", "sig_50GeV.root", "sig_100GeV.root"],
+    "background_file": "bg.root",
+    "background": true,
+    "final_state": "hadronic"
+}
