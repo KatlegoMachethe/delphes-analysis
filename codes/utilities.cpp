@@ -32,7 +32,7 @@ json load_config(const std::string& filename)
  */
 Double_t calculate_dphi(TLorentzVector p1_v, TLorentzVector p2_v)
 {
-    return p1_v.Phi() - p2_v.Phi();
+    return p1_v.DeltaPhi(p2_v);
 }
 
 /**
@@ -41,9 +41,24 @@ Double_t calculate_dphi(TLorentzVector p1_v, TLorentzVector p2_v)
  */
 TLorentzVector transform_bjet(TLorentzVector bjet, const TLorentzVector &top)
 {
-    // Rotatate and boost the 
-    bjet.RotateZ(-top.Phi());
-    bjet.RotateY(-top.Theta());
-    bjet.Boost(-top.BoostVector());
+    // Rotatate and boost the
+    // bjet.Boost(-top.BoostVector());
+    // bjet.RotateZ(-top.Phi());
+    // bjet.RotateY(-top.Theta());
+
+
+    // Ammendments from Karabo Mosala
+    // Rotate the top so that it points along +z
+    TLorentzVector t = top;
+    // t.RotateZ(-top.Phi());
+    // t.RotateY(-top.Theta());
+
+    // Apply the same rotation to the b-jet
+    // bjet.RotateZ(-top.Phi());
+    // bjet.RotateY(-top.Theta());
+
+    // Boost with the ROTATED top velocity (now along +z)
+    bjet.Boost(-t.BoostVector());
+
     return bjet;
 }

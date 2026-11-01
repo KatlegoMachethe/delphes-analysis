@@ -96,12 +96,12 @@ int main(int argc, char *argv[])
         // Defining histograms
         TString labels = ";#delta #Phi;#frac{1}{#sigma} #frac{d#sigma}{d#Phi}";
 
-        TH1F *h0 =new TH1F(obs[0] + "_" + sampleLabel, labels, 20, -3.14159, 3.14159);
-        TH1F *h1 =new TH1F(obs[1] + "_" + sampleLabel, labels, 20, -3.14159, 3.14159);
-        TH1F *h2 =new TH1F(obs[2] + "_" + sampleLabel, labels, 20, -3.14159, 3.14159);
-        TH1F *h3 =new TH1F(obs[3] + "_" + sampleLabel, labels, 20, -3.14159, 3.14159);
-        TH1F *h4 =new TH1F(obs[4] + "_" + sampleLabel, labels, 20, -3.14159, 3.14159);
-        TH1F *h5 =new TH1F(obs[5] + "_" + sampleLabel, labels, 20, -3.14159, 3.14159);
+        TH1F *h0 =new TH1F(obs[0] + "_" + sampleLabel, labels, 20, -TMath::Pi(), TMath::Pi());
+        TH1F *h1 =new TH1F(obs[1] + "_" + sampleLabel, labels, 20, -TMath::Pi(), TMath::Pi());
+        TH1F *h2 =new TH1F(obs[2] + "_" + sampleLabel, labels, 20, -TMath::Pi(), TMath::Pi());
+        TH1F *h3 =new TH1F(obs[3] + "_" + sampleLabel, labels, 20, -TMath::Pi(), TMath::Pi());
+        TH1F *h4 =new TH1F(obs[4] + "_" + sampleLabel, labels, 20, -TMath::Pi(), TMath::Pi());
+        TH1F *h5 =new TH1F(obs[5] + "_" + sampleLabel, labels, 20, -TMath::Pi(), TMath::Pi());
         TH1F *h6 =new TH1F(obs[6] + "_" + sampleLabel, ";#cos #theta;#frac{1}{#sigma} #frac{d#sigma}{d#cos#theta}", 20, -1.0, 1.0);
 
         h0 -> Sumw2();
@@ -181,9 +181,9 @@ int main(int argc, char *argv[])
                 calculate_dphi(gamma1->P4(), jet1->P4()),
                 calculate_dphi(jet1->P4(), jet2->P4()),
                 calculate_dphi(gamma1->P4(), jet2->P4()),
-                calculate_dphi(gamma1->P4(), boosted_bjet),
-                calculate_dphi(gamma2->P4(), boosted_bjet),
-                calculate_dphi(jet1->P4(), boosted_bjet),
+                calculate_dphi(gamma1->P4(), bjet->P4()),
+                calculate_dphi(gamma2->P4(), bjet->P4()),
+                calculate_dphi(jet1->P4(), bjet->P4()),
                 boosted_bjet.CosTheta()
             };
 
@@ -196,7 +196,8 @@ int main(int argc, char *argv[])
                 gamma1->PT > 5 && gamma2->PT > 5 && axion.M() > 97 && axion.M() < 103   // m100
             };
 
-            if (gamma1->Eta >= 0.5 && gamma1->Eta <= 5.0 && gamma2->Eta >= 0.5 && gamma2->Eta <= 5.0)
+            // if (gamma1->Eta >= 0.5 && gamma1->Eta <= 5.0 && gamma2->Eta >= 0.5 && gamma2->Eta <= 5.0)
+            if (fabs(gamma1->Eta) >= 0.5 && fabs(gamma1->Eta) <= 5.0 && fabs(gamma2->Eta) >= 0.5 && fabs(gamma2->Eta) <= 5.0)
             {
                 if (cuts[f])
                 {
