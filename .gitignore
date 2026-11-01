@@ -2,3 +2,5 @@ sig_*
 bg.root
 download.tar
 .codes
+.codex
+.ipynb_checkpoints
